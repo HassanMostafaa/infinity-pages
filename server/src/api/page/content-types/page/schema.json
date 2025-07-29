@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "MetaData": {
+      "type": "component",
+      "component": "meta.page-meta",
+      "repeatable": false
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "hero-section.hero-with-slides",
+        "sections.three-columns-swiper",
+        "sections.title-description-ct-as",
+        "sections.title-description-media"
+      ]
+    }
+  }
+}

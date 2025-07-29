@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_meta_page_metas",
+  "info": {
+    "displayName": "PageMeta",
+    "icon": "stack"
+  },
+  "options": {},
+  "attributes": {
+    "Slug": {
+      "type": "string",
+      "default": "/",
+      "minLength": 3,
+      "required": true,
+      "unique": true,
+      "regex": "^\\/[a-z0-9\\-\\/]+$"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "LongNavigationName": {
+      "type": "string"
+    },
+    "NavigationName": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

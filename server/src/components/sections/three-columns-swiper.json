@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_three_columns_swipers",
+  "info": {
+    "displayName": "ThreeColumnsSwiper",
+    "icon": "filter"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Items": {
+      "type": "component",
+      "component": "shared.simple-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -1,0 +1,60 @@
+{
+  "collectionName": "components_hero_section_hero_slides",
+  "info": {
+    "displayName": "HeroSlide",
+    "icon": "television"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Button": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": false
+    },
+    "Media": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "UserFullOverlay": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "UseHalfOverlay"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    },
+    "UseHalfOverlay": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "UserFullOverlay"
+            },
+            true
+          ]
+        }
+      },
+      "default": false
+    }
+  },
+  "config": {}
+}

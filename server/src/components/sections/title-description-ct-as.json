@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_title_description_ct_as",
+  "info": {
+    "displayName": "TitleDescriptionCTAs",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "CTA": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

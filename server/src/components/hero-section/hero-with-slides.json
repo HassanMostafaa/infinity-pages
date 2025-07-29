@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_hero_section_hero_with_slides",
+  "info": {
+    "displayName": "HeroWithSlides",
+    "icon": "television"
+  },
+  "options": {},
+  "attributes": {
+    "Slides": {
+      "type": "component",
+      "component": "hero-section.hero-slide",
+      "repeatable": true
+    },
+    "Breadcrumbs": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

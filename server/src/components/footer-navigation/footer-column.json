@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_footer_navigation_footer_columns",
+  "info": {
+    "displayName": "FooterColumn",
+    "icon": "globe"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Links": {
+      "type": "component",
+      "component": "shared.link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

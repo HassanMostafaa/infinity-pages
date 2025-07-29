@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_navigations",
+  "info": {
+    "singularName": "footer-navigation",
+    "pluralName": "footer-navigations",
+    "displayName": "FooterNavigation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Columns": {
+      "type": "component",
+      "component": "footer-navigation.footer-column",
+      "repeatable": true
+    }
+  }
+}
