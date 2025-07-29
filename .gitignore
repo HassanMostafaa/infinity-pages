@@ -1,0 +1,33 @@
+# macOS system files
+.DS_Store
+
+# Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Next.js build output
+.next/
+client/.next/
+server/.next/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Optional: ignore local Vercel settings
+.vercel
+
+# Optional: ignore VS Code settings
+.vscode/
+
+# Optional: Ignore any lock files if you don’t want to enforce them
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

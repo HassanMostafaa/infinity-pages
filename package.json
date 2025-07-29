@@ -1,0 +1,23 @@
+{
+  "name": "infinity-pages",
+  "version": "1.0.0",
+  "description": "Infinite Pages is a dynamic Next.js platform powered by Strapi and GraphQL, enabling editors to create unlimited customizable pages using modular components.",
+  "keywords": [
+    "nextjs",
+    "strapi",
+    "graphql",
+    "headless-cms",
+    "dynamic-pages",
+    "infinite-pages",
+    "react",
+    "apollo-client",
+    "jamstack"
+  ],
+  "license": "ISC",
+  "author": "Hassan Mohamed",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
