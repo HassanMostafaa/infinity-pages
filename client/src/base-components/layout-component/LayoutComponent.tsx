@@ -5,7 +5,8 @@ export const LayoutComponent: FunctionComponent<PropsWithChildren> = ({
 }) => {
   return (
     <div className="min-h-screen">
-      <nav>header</nav>
+      <header>header</header>
+      <nav>navigation</nav>
       {children}
       <footer>footer</footer>
     </div>

@@ -457,7 +457,7 @@ export interface ApiHeaderNavigationHeaderNavigation
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Link: Schema.Attribute.Component<
+    Links: Schema.Attribute.Component<
       'header-navigation.header-navigation-link',
       true
     >;

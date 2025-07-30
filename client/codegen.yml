@@ -1,0 +1,12 @@
+overwrite: true
+schema: ${NEXT_PUBLIC_STRAPI_GRAPHQL}
+generates:
+  ./src/types.d.ts:
+    plugins:
+      - add:
+          content: "/* eslint-disable @typescript-eslint/no-explicit-any */"
+      - "typescript"
+    config:
+      namingConvention:
+        typeNames: change-case-all#pascalCase
+      typesPrefix: "IGen"

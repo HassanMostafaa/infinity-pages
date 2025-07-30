@@ -20,7 +20,7 @@ export interface HeaderNavigationHeaderNavigationLink
     icon: 'globe';
   };
   attributes: {
-    Link: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
+    Page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
   };
 }
 

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.responsive {
+  @apply container mx-auto;
+}

@@ -21,7 +21,7 @@
         "audios"
       ]
     },
-    "Link": {
+    "Links": {
       "type": "component",
       "component": "header-navigation.header-navigation-link",
       "repeatable": true
