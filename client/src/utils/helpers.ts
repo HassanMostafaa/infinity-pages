@@ -6,7 +6,9 @@
  * buildSlug(['about', 'team']) // returns "about/team"
  * buildSlug(undefined) // returns "home"
  */
-export const buildPageSlug = (slug: string[] | undefined): string => {
+export const buildPageSlug = async (
+  slug: string[] | undefined
+): Promise<string> => {
   if (!slug || slug.length === 0) {
     return "home";
   }

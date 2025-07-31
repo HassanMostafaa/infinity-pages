@@ -66,6 +66,7 @@ export interface SharedLink {
   Text?: string;
   page?: Page | null;
   ExternalUrl?: string;
+  IsExternal?: boolean;
 };
 
 export interface SharedSimpleCard {

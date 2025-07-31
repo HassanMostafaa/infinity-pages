@@ -216,6 +216,7 @@ export type IGenComponentSectionsTitleDescriptionMediaCtAsArgs = {
 export type IGenComponentSharedLink = {
   __typename?: 'ComponentSharedLink';
   ExternalUrl?: Maybe<Scalars['String']['output']>;
+  IsExternal?: Maybe<Scalars['Boolean']['output']>;
   Text?: Maybe<Scalars['String']['output']>;
   id: Scalars['ID']['output'];
   page?: Maybe<IGenPage>;
@@ -223,6 +224,7 @@ export type IGenComponentSharedLink = {
 
 export type IGenComponentSharedLinkFiltersInput = {
   ExternalUrl?: InputMaybe<IGenStringFilterInput>;
+  IsExternal?: InputMaybe<IGenBooleanFilterInput>;
   Text?: InputMaybe<IGenStringFilterInput>;
   and?: InputMaybe<Array<InputMaybe<IGenComponentSharedLinkFiltersInput>>>;
   not?: InputMaybe<IGenComponentSharedLinkFiltersInput>;
@@ -232,6 +234,7 @@ export type IGenComponentSharedLinkFiltersInput = {
 
 export type IGenComponentSharedLinkInput = {
   ExternalUrl?: InputMaybe<Scalars['String']['input']>;
+  IsExternal?: InputMaybe<Scalars['Boolean']['input']>;
   Text?: InputMaybe<Scalars['String']['input']>;
   id?: InputMaybe<Scalars['ID']['input']>;
   page?: InputMaybe<Scalars['ID']['input']>;
