@@ -6,9 +6,7 @@ import React, { FunctionComponent, PropsWithChildren } from "react";
 export const LayoutComponent: FunctionComponent<PropsWithChildren> = async ({
   children,
 }) => {
-  // we can fetch layout data here if needed
   const layoutData = await getLayout({ locale: "en" });
-  console.log("Layout Data:", layoutData);
   return (
     <div className="min-h-screen flex flex-col">
       {/* header */}

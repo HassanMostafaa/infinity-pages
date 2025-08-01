@@ -22,9 +22,6 @@ export const getPageBySlug = async (slug: string): Promise<IPageQuery> => {
         },
       },
     });
-
-  console.log({ pageQuery });
-
   return {
     page: pageQuery?.data?.pages?.[0] || null,
     is404: !pageQuery?.data?.pages?.length,
