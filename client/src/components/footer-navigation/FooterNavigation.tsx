@@ -5,7 +5,6 @@ import React, { FunctionComponent } from "react";
 export const FooterNavigation: FunctionComponent<IGenFooterNavigation> = ({
   Columns,
 }) => {
-  console.log("FooterNavigation Columns:", Columns);
   return (
     <div className=" py-10 responsive">
       {Columns && Columns.length > 0 && (

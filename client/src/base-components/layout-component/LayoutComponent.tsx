@@ -14,9 +14,7 @@ export const LayoutComponent: FunctionComponent<PropsWithChildren> = async ({
       {/* header */}
       {layoutData?.header && <HeaderNavigation {...layoutData?.header} />}
       {/* content */}
-      <div className="flex-1 flex flex-col justify-center items-center">
-        {children}
-      </div>
+      <div className="flex-1">{children}</div>
       {/* footer */}
       {layoutData?.footer && <FooterNavigation {...layoutData?.footer} />}
     </div>
