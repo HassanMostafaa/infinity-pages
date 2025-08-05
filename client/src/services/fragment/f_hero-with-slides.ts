@@ -13,6 +13,8 @@ export const f_heroWithSlides = gql`
           MetaData {
             NavigationName
             Slug
+            LongNavigationName
+            Title
           }
         }
         ExternalUrl

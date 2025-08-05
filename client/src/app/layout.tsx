@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
 import { LayoutComponent } from "@/base-components/layout-component/LayoutComponent";
 
 const outfit = Outfit({

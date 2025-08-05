@@ -1,3 +1,4 @@
+import { HeroWithSlides } from "@/components/hero-with-slides";
 import { IGenPageContentDynamicZone, Maybe } from "@/types";
 
 export const Page = ({
@@ -16,7 +17,7 @@ export const Page = ({
 function renderer(section: Maybe<IGenPageContentDynamicZone>) {
   switch (section?.__typename) {
     case "ComponentHeroSectionHeroWithSlides":
-      return <div>HeroWithSlides</div>;
+      return <HeroWithSlides {...section} />;
     case "ComponentSectionsThreeColumnsSwiper":
       return <div>ThreeColumnsSwiper</div>;
     case "ComponentSectionsTitleDescriptionCtAs":
