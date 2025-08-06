@@ -14,3 +14,26 @@ export const slugBuilder = async (
   }
   return "/" + slug.join("/");
 };
+
+/**
+ * Checks whether a given URL is an external URL, i.e., whether its origin
+ * differs from the origin of the current page.
+ *
+ * @param url - The URL to check
+ * @returns `true` if the URL is external, `false` otherwise
+ *
+ * @example
+ * isExternalUrl('https://example.com') // true
+ * isExternalUrl('https://myapp.com/about') // false
+ * isExternalUrl('about') // false
+ * isExternalUrl('') // false
+ */
+export const isExternalUrl = (url: string): boolean => {
+  try {
+    const parsedUrl = new URL(url);
+    return parsedUrl.origin !== window.location.origin;
+  } catch (error) {
+    console.error("Invalid URL:", url, error);
+    return false;
+  }
+};

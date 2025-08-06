@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { RichtextRenderer } from "../richtext-renderer/RichtextRenderer";
 import Link from "next/link";
 import { Button } from "@/base-components/button/Button";
+import { isExternalUrl } from "@/utils/helpers";
 
 export type IHeroWithSlides = Omit<
   IGenComponentHeroSectionHeroWithSlides,
@@ -34,16 +35,22 @@ export const HeroWithSlides: FunctionComponent<IHeroWithSlides> = ({
       >
         {Slides.map((slide, index) => {
           return (
-            <SwiperSlide className="h-full" key={index}>
-              {slide?.Media?.url && (
+            <SwiperSlide className="h-full min-h-[60vh]" key={index}>
+              {slide?.Media?.url ? (
                 <div className="h-full z-[2] absolute top-0 w-full">
                   <Image
                     fill
-                    src={process.env.NEXT_PUBLIC_STRAPI_URL + slide?.Media?.url}
+                    src={
+                      isExternalUrl(slide?.Media?.url)
+                        ? slide?.Media?.url
+                        : process.env.NEXT_PUBLIC_STRAPI_URL + slide?.Media?.url
+                    }
                     alt={slide?.Media?.alternativeText ?? ""}
                     className="object-cover w-full h-full"
                   />
                 </div>
+              ) : (
+                <div className="h-full z-[2] absolute top-0 w-full bg-neutral-400"></div>
               )}
               {(slide?.Title || slide?.Description) && (
                 <div className="py-20 relative min-h-[50vh] justify-center items-center text-center z-[3] flex flex-col gap-10">
