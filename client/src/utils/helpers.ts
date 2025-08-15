@@ -9,7 +9,7 @@
 export const slugBuilder = async (
   slug: string[] | undefined
 ): Promise<string> => {
-  if (!slug || slug.length === 0) {
+  if (!slug || slug?.length === 0) {
     return "/home";
   }
   return "/" + slug.join("/");
@@ -29,11 +29,27 @@ export const slugBuilder = async (
  * isExternalUrl('') // false
  */
 export const isExternalUrl = (url: string): boolean => {
+  if (typeof window === "undefined") return false; // SSR guard
   try {
-    const parsedUrl = new URL(url);
-    return parsedUrl.origin !== window.location.origin;
-  } catch (error) {
-    console.error("Invalid URL:", url, error);
+    if (!/^https?:\/\//i.test(url)) return false;
+    return new URL(url).origin !== window.location.origin;
+  } catch {
     return false;
   }
+};
+
+export const getCMSMediaURL = (mediaUrl: string | null | undefined): string => {
+  if (!mediaUrl) {
+    console.warn("No media URL provided", { mediaUrl });
+    return "";
+  }
+  if (isExternalUrl(mediaUrl)) {
+    return mediaUrl;
+  }
+  const strapiUrl = process.env.NEXT_PUBLIC_STRAPI_URL;
+  if (!strapiUrl) {
+    console.error("Strapi URL is not defined in environment variables");
+    return mediaUrl;
+  }
+  return strapiUrl + mediaUrl;
 };

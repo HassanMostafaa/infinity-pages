@@ -218,6 +218,7 @@ export type IGenComponentSharedLink = {
   ExternalUrl?: Maybe<Scalars['String']['output']>;
   IsExternal?: Maybe<Scalars['Boolean']['output']>;
   Text?: Maybe<Scalars['String']['output']>;
+  UseSelfTarget?: Maybe<Scalars['Boolean']['output']>;
   id: Scalars['ID']['output'];
   page?: Maybe<IGenPage>;
 };
@@ -226,6 +227,7 @@ export type IGenComponentSharedLinkFiltersInput = {
   ExternalUrl?: InputMaybe<IGenStringFilterInput>;
   IsExternal?: InputMaybe<IGenBooleanFilterInput>;
   Text?: InputMaybe<IGenStringFilterInput>;
+  UseSelfTarget?: InputMaybe<IGenBooleanFilterInput>;
   and?: InputMaybe<Array<InputMaybe<IGenComponentSharedLinkFiltersInput>>>;
   not?: InputMaybe<IGenComponentSharedLinkFiltersInput>;
   or?: InputMaybe<Array<InputMaybe<IGenComponentSharedLinkFiltersInput>>>;
@@ -236,6 +238,7 @@ export type IGenComponentSharedLinkInput = {
   ExternalUrl?: InputMaybe<Scalars['String']['input']>;
   IsExternal?: InputMaybe<Scalars['Boolean']['input']>;
   Text?: InputMaybe<Scalars['String']['input']>;
+  UseSelfTarget?: InputMaybe<Scalars['Boolean']['input']>;
   id?: InputMaybe<Scalars['ID']['input']>;
   page?: InputMaybe<Scalars['ID']['input']>;
 };

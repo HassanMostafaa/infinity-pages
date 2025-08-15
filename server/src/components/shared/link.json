@@ -51,6 +51,20 @@
     "IsExternal": {
       "type": "boolean",
       "default": false
+    },
+    "UseSelfTarget": {
+      "type": "boolean",
+      "conditions": {
+        "visible": {
+          "!=": [
+            {
+              "var": "IsExternal"
+            },
+            false
+          ]
+        }
+      },
+      "default": true
     }
   },
   "config": {}

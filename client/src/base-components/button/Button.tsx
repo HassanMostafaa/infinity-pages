@@ -6,9 +6,19 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 export const Button: FunctionComponent<IButtonProps> = ({ text, ...props }) => {
   return (
     <button
-      className={` bg-white py-2 px-4 text-xs md:text-base ${
-        props?.className ?? ""
-      }`}
+      className={` 
+      //base-classes
+        rounded-lg  py-2 px-4 text-xs md:text-base
+
+      //disabled-state
+      ${
+        props?.disabled
+          ? "!bg-neutral-200 !text-neutral-400 cursor-default pointer-events-none"
+          : "bg-neutral-100 cursor-pointer hover:bg-neutral-200 active:bg-neutral-300"
+      } 
+        
+      ${props?.className ?? ""}
+      `}
       {...props}
     >
       {text}

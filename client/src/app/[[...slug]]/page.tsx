@@ -8,7 +8,7 @@ export default async function NextjsPage({
 }: {
   params: { slug: string[] | undefined };
 }) {
-  const querySlug = await slugBuilder(params.slug);
+  const querySlug = await slugBuilder(params?.slug);
   const { page } = await getPageBySlug(querySlug);
   return <>{page?.Content && <Page sections={page?.Content} />}</>;
 }

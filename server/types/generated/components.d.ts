@@ -135,6 +135,7 @@ export interface SharedLink extends Struct.ComponentSchema {
     IsExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
     Text: Schema.Attribute.String;
+    UseSelfTarget: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
   };
 }
 
