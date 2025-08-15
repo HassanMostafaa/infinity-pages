@@ -4,7 +4,11 @@ import React, { type FunctionComponent } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { HeroSlide } from "./Components/HeroSlide";
 // import { useDispatch, useSelector } from "@/store/hooks";
-// import { asyncChangeByAmount, incrementByOne } from "@/store/features/counter/counterSlice";
+// import {
+//   asyncChangeByAmount,
+//   incrementByOne,
+// } from "@/store/features/counter/counterSlice";
+// import { debounce } from "@/utils/helpers";
 
 export type IHeroWithSlides = Omit<
   IGenComponentHeroSectionHeroWithSlides,
@@ -19,7 +23,11 @@ export const HeroWithSlides: FunctionComponent<IHeroWithSlides> = ({
 
   // const count = useSelector((state) => state.counter.count);
   // const dispatch = useDispatch();
-  // dispatch(incrementByOne());
+  // const dispatchAsyncDebounced = useRef(
+  //   debounce((amount: number) => {
+  //     dispatch(asyncChangeByAmount(amount));
+  //   }, 500) // wait 500ms between calls
+  // ).current;
 
   if (!Slides || Slides.length === 0) {
     return <></>;
@@ -30,7 +38,7 @@ export const HeroWithSlides: FunctionComponent<IHeroWithSlides> = ({
       <br />
       <button
         onClick={() => {
-          dispatch(asyncChangeByAmount(5));
+          dispatchAsyncDebounced(5);
         }}
       >
         alo
