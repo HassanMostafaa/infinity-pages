@@ -2,9 +2,9 @@
 import { IGenComponentHeroSectionHeroWithSlides } from "@/types";
 import React, { type FunctionComponent } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import { useDispatch, useSelector } from "@/store/hooks";
-// import { incrementByOne } from "@/store/features/counter/counterSlice";
 import { HeroSlide } from "./Components/HeroSlide";
+// import { useDispatch, useSelector } from "@/store/hooks";
+// import { asyncChangeByAmount, incrementByOne } from "@/store/features/counter/counterSlice";
 
 export type IHeroWithSlides = Omit<
   IGenComponentHeroSectionHeroWithSlides,
@@ -26,6 +26,15 @@ export const HeroWithSlides: FunctionComponent<IHeroWithSlides> = ({
   }
   return (
     <div>
+      {/* {JSON.stringify({ count })}
+      <br />
+      <button
+        onClick={() => {
+          dispatch(asyncChangeByAmount(5));
+        }}
+      >
+        alo
+      </button> */}
       <Swiper
         slidesPerView={1}
         className="hero-with-slides-swiper"
